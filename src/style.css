@@ -2,9 +2,16 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #fff;
 }
-.main {
+
+.cont {
   display: block;
   margin: 0 auto;
+  width: 880px;
+}
+
+.main {
+  display: block;
+  margin: 20px auto;
   width: 800px;
   background-color: #497174;
   padding: 20px 50px 50px;
@@ -325,4 +332,15 @@ th:nth-child(odd) {
 tr:hover td {
   background: #eff5f5;
   font-weight: bold;
+}
+
+.linkGit {
+  margin-left: 80px;
+  color: #497174;
+  text-align: left;
+}
+
+.git {
+  color: #eb6440;
+  text-decoration: none;
 }
