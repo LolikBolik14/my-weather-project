@@ -1,0 +1,328 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+}
+.main {
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+  background-color: #497174;
+  padding: 20px 50px 50px;
+  border-radius: 40px;
+}
+
+/* Header */
+.header {
+  padding-top: 30px;
+  margin-bottom: 25px;
+}
+
+.logo,
+.search,
+.current-button {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.logo-title {
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 42px;
+  color: #fff;
+  margin: 0;
+}
+
+.img-logo {
+  width: 32px;
+}
+
+.logo {
+  width: 300px;
+}
+
+.search {
+  padding: 0 15px 0 40px;
+}
+
+.previous-city-search {
+  font-size: 14px;
+  margin: 0;
+}
+
+.previous {
+  color: #fff;
+  margin-left: 5px;
+  text-decoration: dotted;
+}
+* {
+  box-sizing: border-box;
+}
+
+#searching {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.search-city {
+  width: 100%;
+  height: 36px;
+  padding-left: 10px;
+  border: 2px solid #eb6440;
+  border-radius: 5px;
+  outline: none;
+  background: #eff5f5;
+  color: #9e9c9c;
+}
+
+.search-city:focus {
+  font-size: 18px;
+  color: #497174;
+}
+
+.search_city-submit {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 42px;
+  height: 36px;
+  border: none;
+  background: #eb6440;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search_city-submit:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #f9f0da;
+}
+
+.current-button {
+  position: relative;
+  bottom: 17px;
+}
+
+#current-button {
+  font-size: 16px;
+  height: 36px;
+  width: 80px;
+  background: #eb6440;
+  color: #f9f0da;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* City Name  */
+h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 32px;
+  margin: 0;
+}
+
+#city {
+  font-size: 36px;
+}
+
+/* Temperatupe, description and date today in city */
+.temperature-city {
+  color: #497174;
+  font-weight: 700;
+  margin: 10px 0;
+  width: 700px;
+  height: 140px;
+}
+
+.temperature-today,
+.current-description,
+.date {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-left: 0px;
+  border-style: 0;
+}
+
+.temperature-today {
+  text-align: center;
+  width: 38%;
+  padding-top: 46px;
+  background-color: #eff5f5;
+  border-left: 5px solid #f4eee8;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.degrees {
+  font-size: 40px;
+}
+
+.img-today {
+  width: 80px;
+  float: left;
+  margin-right: -20px;
+  margin-left: 20px;
+}
+
+/* Fahrenheit and Celsius */
+.units {
+  font-size: 24px;
+  vertical-align: top;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.unit {
+  color: #497174;
+  text-decoration: none;
+}
+
+.unit:focus,
+.unit:hover {
+  color: #eb6440;
+}
+
+/* Description Weather */
+.current-description {
+  width: 30%;
+  padding-top: 15px;
+  border-right: 1px solid #f4eee8;
+  border-left: 1px solid #f4eee8;
+  background-color: #d6e4e5;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.current-desc {
+  list-style-type: none;
+  line-height: 1.5em;
+  font-size: 18px;
+  font-weight: 400;
+}
+#description {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+/* Date and Time */
+.date {
+  width: 30%;
+  background-color: #eff5f5;
+  border-right: 1px solid #f4eee8;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.time-day-month {
+  text-align: center;
+  font-size: 18px;
+}
+
+#time {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+#day,
+#month {
+  font-weight: 400;
+}
+
+.font-weight-bold {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* Sunrise and Sunset */
+.sunset {
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* Weather Forecast Table */
+table,
+.weather-titles {
+  display: inline-block;
+  margin: auto;
+}
+
+table {
+  border-spacing: 0;
+  empty-cells: hide;
+  color: #497174;
+}
+
+.mini-img {
+  width: 50px;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.wind-img {
+  width: 20px;
+}
+
+.properties {
+  line-height: 3.4em;
+  padding-bottom: 2px;
+}
+
+.day {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.temperature-day {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+td {
+  padding: 10px 15px;
+  text-align: center;
+  border-bottom: 1px solid #f4eee8;
+  transition: all 0.5s linear;
+}
+
+th {
+  padding: 10px 15px;
+  color: #3d3511;
+  border-bottom: 1px solid #f4eee8;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+td:nth-child(even) {
+  background: #eff5f5;
+}
+td:nth-child(odd) {
+  background: #d6e4e5;
+}
+th:nth-child(even) {
+  background: #eff5f5;
+}
+th:nth-child(odd) {
+  background: #d6e4e5;
+}
+
+.round-bottom {
+  border-bottom-right-radius: 5px;
+}
+
+.precipitation {
+  border-bottom-left-radius: 5px;
+}
+
+tr:hover td {
+  background: #eff5f5;
+  font-weight: bold;
+}
