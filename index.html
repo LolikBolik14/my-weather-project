@@ -13,189 +13,200 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Forecast</title>
     <body>
-      <div class="main">
-        <div class="header">
-          <!-- Logo -->
-          <div class="logo">
-            <h1 class="logo-title">
-              WEA<img src="images/logo.png" alt="logo" class="img-logo" />THER
-            </h1>
+      <div class="cont">
+        <div class="main">
+          <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+              <h1 class="logo-title">
+                WEA<img src="images/logo.png" alt="logo" class="img-logo" />THER
+              </h1>
+            </div>
+
+            <!-- Search form-->
+            <div class="search">
+              <form id="searching">
+                <input
+                  class="search-city"
+                  id="enter-city"
+                  type="text"
+                  placeholder="Enter a city" />
+                <button class="search_city-submit" type="submit"></button>
+                <p class="previous-city-search">
+                  <a href="#" class="previous">Kyiv</a>
+                  <a href="#" class="previous">Kharkiv</a>
+                  <a href="#" class="previous">Frankfurt</a>
+                  <a href="#" class="previous">Boston</a>
+                </p>
+              </form>
+            </div>
+
+            <!-- Current button -->
+            <div class="current-button">
+              <button id="current-button">Current</button>
+            </div>
           </div>
 
-          <!-- Search form-->
-          <div class="search">
-            <form id="searching">
-              <input
-                class="search-city"
-                id="enter-city"
-                type="text"
-                placeholder="Enter a city" />
-              <button class="search_city-submit" type="submit"></button>
-              <p class="previous-city-search">
-                <a href="#" class="previous">Kyiv</a>
-                <a href="#" class="previous">Kharkiv</a>
-                <a href="#" class="previous">Frankfurt</a>
-                <a href="#" class="previous">Boston</a>
+          <!-- Temperature in city today -->
+          <h2>
+            in
+            <span id="city"> Philadelphia</span>
+          </h2>
+          <div class="temperature-city">
+            <div class="temperature-today">
+              <img src="images/sun-cloud-3.png" alt="" class="img-today" />
+              <span class="degrees" id="degrees"> 28 </span>
+              <span class="units">
+                <a href="#" class="unit" id="celsius">°C</a>|<a
+                  href="#"
+                  class="unit"
+                  id="fahrenheit"
+                  >°F</a
+                >
+              </span>
+            </div>
+            <div class="current-description">
+              <ul class="current-desc">
+                <li id="description"></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>m/s</li>
+              </ul>
+            </div>
+            <!-- Date -->
+            <div class="date">
+              <p class="time-day-month">
+                <span id="time"></span>
+                <br />
+                <span id="day">Wednesday</span>
+                <br />
+                <span class="font-weight-bold" id="number">7</span>
+                <br />
+                <span id="month">September</span>
               </p>
-            </form>
+            </div>
           </div>
 
-          <!-- Current button -->
-          <div class="current-button">
-            <button id="current-button">Current</button>
+          <!-- Position of the sun -->
+          <div class="position-sun">
+            <p class="sunset">Sunrise 05:29 Sunset 20:30</p>
+          </div>
+
+          <!-- Forecast -->
+          <div class="forecast">
+            <div class="weather-titles">
+              <p class="properties">
+                Temperature, °C
+                <br />
+                <span class="day">day</span>/night
+                <br />
+                Pressure, mm
+                <br />
+                Humidity, %
+                <br />
+                Wind, m/sec
+                <br />
+                Precipitation, %
+              </p>
+            </div>
+
+            <!-- Table -->
+            <table>
+              <tr class="week">
+                <th>Su</th>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+              </tr>
+              <tr class="img-weather">
+                <td><img src="images/sun.png" alt="sun" class="mini-img" /></td>
+                <td>
+                  <img
+                    src="images/sun-cloud-2.png"
+                    alt="sun cloud"
+                    class="mini-img" />
+                </td>
+                <td>
+                  <img
+                    src="images/dark_cloud.png"
+                    alt="dark cloud"
+                    class="mini-img" />
+                </td>
+                <td><img src="images/rain.png" alt="" class="mini-img" /></td>
+                <td><img src="images/cloud.png" alt="" class="mini-img" /></td>
+                <td><img src="images/sun.png" alt="" class="mini-img" /></td>
+                <td>
+                  <img src="images/sun-cloud-2.png" alt="" class="mini-img" />
+                </td>
+              </tr>
+              <tr class="temperature-day">
+                <td>+30°</td>
+                <td>+26°</td>
+                <td>+25°</td>
+                <td>+28°</td>
+                <td>+37°</td>
+                <td>+24°</td>
+                <td>+26°</td>
+              </tr>
+              <tr class="temperature-night">
+                <td>+18°</td>
+                <td>+21°</td>
+                <td>+18°</td>
+                <td>+19°</td>
+                <td>+18°</td>
+                <td>+20°</td>
+                <td>+17°</td>
+              </tr>
+              <tr class="pressure">
+                <td>757</td>
+                <td>757</td>
+                <td>758</td>
+                <td>757</td>
+                <td>757</td>
+                <td>755</td>
+                <td>755</td>
+              </tr>
+              <tr class="humidity">
+                <td>60</td>
+                <td>76</td>
+                <td>61</td>
+                <td>37</td>
+                <td>24</td>
+                <td>46</td>
+                <td>63</td>
+              </tr>
+              <tr class="wind">
+                <td><img src="images/e.png" alt="" class="wind-img" /></td>
+                <td><img src="images/nw.png" alt="" class="wind-img" /></td>
+                <td><img src="images/s.png" alt="" class="wind-img" /></td>
+                <td><img src="images/ne.png" alt="" class="wind-img" /></td>
+                <td><img src="images/s.png" alt="" class="wind-img" /></td>
+                <td><img src="images/se.png" alt="" class="wind-img" /></td>
+                <td><img src="images/w.png" alt="" class="wind-img" /></td>
+              </tr>
+              <tr>
+                <td class="precipitation">2</td>
+                <td>25</td>
+                <td>73</td>
+                <td>98</td>
+                <td>40</td>
+                <td>5</td>
+                <td class="round-bottom">50</td>
+              </tr>
+            </table>
           </div>
         </div>
-
-        <!-- Temperature in city today -->
-        <h2>
-          in
-          <span id="city"> Philadelphia</span>
-        </h2>
-        <div class="temperature-city">
-          <div class="temperature-today">
-            <img src="images/sun-cloud-3.png" alt="" class="img-today" />
-            <span class="degrees" id="degrees"> 28 </span>
-            <span class="units">
-              <a href="#" class="unit" id="celsius">°C</a>|<a
-                href="#"
-                class="unit"
-                id="fahrenheit"
-                >°F</a
-              >
-            </span>
-          </div>
-          <div class="current-description">
-            <ul class="current-desc">
-              <li id="description"></li>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span>m/s</li>
-            </ul>
-          </div>
-          <!-- Date -->
-          <div class="date">
-            <p class="time-day-month">
-              <span id="time"></span>
-              <br />
-              <span id="day">Wednesday</span>
-              <br />
-              <span class="font-weight-bold" id="number">7</span>
-              <br />
-              <span id="month">September</span>
-            </p>
-          </div>
-        </div>
-
-        <!-- Position of the sun -->
-        <div class="position-sun">
-          <p class="sunset">Sunrise 05:29 Sunset 20:30</p>
-        </div>
-
-        <!-- Forecast -->
-        <div class="forecast">
-          <div class="weather-titles">
-            <p class="properties">
-              Temperature, °C
-              <br />
-              <span class="day">day</span>/night
-              <br />
-              Pressure, mm
-              <br />
-              Humidity, %
-              <br />
-              Wind, m/sec
-              <br />
-              Precipitation, %
-            </p>
-          </div>
-
-          <!-- Table -->
-          <table>
-            <tr class="week">
-              <th>Su</th>
-              <th>Mo</th>
-              <th>Tu</th>
-              <th>We</th>
-              <th>Th</th>
-              <th>Fr</th>
-              <th>Sa</th>
-            </tr>
-            <tr class="img-weather">
-              <td><img src="images/sun.png" alt="sun" class="mini-img" /></td>
-              <td>
-                <img
-                  src="images/sun-cloud-2.png"
-                  alt="sun cloud"
-                  class="mini-img" />
-              </td>
-              <td>
-                <img
-                  src="images/dark_cloud.png"
-                  alt="dark cloud"
-                  class="mini-img" />
-              </td>
-              <td><img src="images/rain.png" alt="" class="mini-img" /></td>
-              <td><img src="images/cloud.png" alt="" class="mini-img" /></td>
-              <td><img src="images/sun.png" alt="" class="mini-img" /></td>
-              <td>
-                <img src="images/sun-cloud-2.png" alt="" class="mini-img" />
-              </td>
-            </tr>
-            <tr class="temperature-day">
-              <td>+30°</td>
-              <td>+26°</td>
-              <td>+25°</td>
-              <td>+28°</td>
-              <td>+37°</td>
-              <td>+24°</td>
-              <td>+26°</td>
-            </tr>
-            <tr class="temperature-night">
-              <td>+18°</td>
-              <td>+21°</td>
-              <td>+18°</td>
-              <td>+19°</td>
-              <td>+18°</td>
-              <td>+20°</td>
-              <td>+17°</td>
-            </tr>
-            <tr class="pressure">
-              <td>757</td>
-              <td>757</td>
-              <td>758</td>
-              <td>757</td>
-              <td>757</td>
-              <td>755</td>
-              <td>755</td>
-            </tr>
-            <tr class="humidity">
-              <td>60</td>
-              <td>76</td>
-              <td>61</td>
-              <td>37</td>
-              <td>24</td>
-              <td>46</td>
-              <td>63</td>
-            </tr>
-            <tr class="wind">
-              <td><img src="images/e.png" alt="" class="wind-img" /></td>
-              <td><img src="images/nw.png" alt="" class="wind-img" /></td>
-              <td><img src="images/s.png" alt="" class="wind-img" /></td>
-              <td><img src="images/ne.png" alt="" class="wind-img" /></td>
-              <td><img src="images/s.png" alt="" class="wind-img" /></td>
-              <td><img src="images/se.png" alt="" class="wind-img" /></td>
-              <td><img src="images/w.png" alt="" class="wind-img" /></td>
-            </tr>
-            <tr>
-              <td class="precipitation">2</td>
-              <td>25</td>
-              <td>73</td>
-              <td>98</td>
-              <td>40</td>
-              <td>5</td>
-              <td class="round-bottom">50</td>
-            </tr>
-          </table>
-        </div>
+        <p class="linkGit">
+          <a
+            href="https://github.com/LolikBolik14/my-weather-project"
+            class="git"
+            target="_blank"
+            >Open-source code,
+          </a>
+          by Olga Shliakhova
+        </p>
       </div>
       <script
         src="https://kit.fontawesome.com/4ed0fbea86.js"
